@@ -289,3 +289,26 @@ Make interactive rebase
 and select squash / drop / etc. for commits
 
 
+
+#### Git commit with stash
+
+Make 1 file and commit
+```sh
+echo "one" >> file.number-one
+git add  file.number-one
+git commit -m "file.number-one added"
+```
+
+edit file file.number-one
+and stash changes
+
+`git stash save "safe point"`
+
+nothing
+`git status`
+`git diff`
+
+check 
+`git stash list`
+`git stash apply stash@{0}`
+
