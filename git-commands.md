@@ -257,3 +257,35 @@ Reflogs
 `git log --graph --oneline --decorate --all -6` - commits still there, files still there, but fast-forward removed
 
 `cat README.txt`
+
+
+#### Git commit with squash
+
+Just in case change editor:
+`git config --global core.editor "vim"`
+
+Make 3 commits
+```sh
+echo "one" >> file.one
+git add  file.one
+git commit -m "file.one added"
+```
+
+```sh
+echo "two" >> file.two
+git add  file.two
+git commit -m "file.two added"
+```
+
+```sh
+echo "three" >> file.three
+git add  file.three
+git commit -m "file.three added"
+```
+
+Make interactive rebase 
+`git rebase -i HEAD~3`
+
+and select squash / drop / etc. for commits
+
+
