@@ -20,3 +20,14 @@ jobs:
           with:
               name: log.md
               path: /home/runner/work/devops-school/devops-school/log.md
+              
+        on: 
+            workflow_dispatch:
+                inputs:
+                    value:
+                    description: 'Insert your value here'     
+                    required: true
+                    default: 'Print something'
+        outputs:
+            - run: |
+        echo "${{ github.event.inputs.value }} > output.txt"
