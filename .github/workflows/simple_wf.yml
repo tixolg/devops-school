@@ -27,4 +27,7 @@ jobs:
                     value:
                     description: 'Insert your value here'     
                     required: true
-                    default: 'Print something'        
+                    default: 'Print something'    
+outputs:
+            - run: |
+        echo "${{ github.event.inputs.value }} > output.txt"                    
