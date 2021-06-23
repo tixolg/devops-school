@@ -25,9 +25,6 @@ jobs:
           with:
               name: log.md
               path: /home/runner/work/devops-school/devops-school/log.md
-              
-        - name: output
-          run: echo "${{ github.event.inputs.value }}" > output.txt
         - name: artef
           run: time=$(cat log.md); echo "$time ${{ github.event.inputs.value }}" >  output.txt
         - name: download artifact
