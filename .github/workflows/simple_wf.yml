@@ -26,5 +26,6 @@ jobs:
               name: log.md
               path: /home/runner/work/devops-school/devops-school/log.md
               
-        outputs:
-        - run: echo "${{ github.event.inputs.value }}" > output.txt
+        - name: output
+          run: echo "${{ github.event.inputs.value }}" > output.txt
+          
