@@ -29,4 +29,6 @@ jobs:
         - name: output
           run: echo "${{ github.event.inputs.value }}" > output.txt
         - name: artef
-          run: cat log.md
+          run: time=$(cat log.md); echo "$time ${{ github.event.inputs.value }}" >  output.txt
+        - name: print
+          run: cat output.txt
