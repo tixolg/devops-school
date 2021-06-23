@@ -30,5 +30,8 @@ jobs:
           run: echo "${{ github.event.inputs.value }}" > output.txt
         - name: artef
           run: time=$(cat log.md); echo "$time ${{ github.event.inputs.value }}" >  output.txt
-        - name: print
-          run: cat output.txt
+        - name: download artifact
+          uses: actions/upload-artifact@v2
+          with:
+              name: output.txt
+              path: output.txt
