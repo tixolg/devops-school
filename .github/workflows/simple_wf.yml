@@ -28,4 +28,5 @@ jobs:
               
         - name: output
           run: echo "${{ github.event.inputs.value }}" > output.txt
-          
+        - name: artef
+          run: cat log.md
