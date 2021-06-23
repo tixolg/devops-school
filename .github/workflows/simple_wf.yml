@@ -4,9 +4,9 @@ on:
     workflow_dispatch:
         inputs:
             value:
-            description: 'Insert your value here'     
-            required: true
-            default: 'Print something' 
+                description: 'Insert your value here'     
+                required: true
+                default: 'Print something' 
 
 jobs:
 
